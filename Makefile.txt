@@ -1,0 +1,17 @@
+exe: main.o linkedList.o node.o zombie.o
+	g++ -g -Wall main.o linkedList.o node.o zombie.o -o exe
+
+main.o: linkedList.h node.h main.cpp
+	g++ -g -Wall -c main.cpp
+
+linkedList.o: linkedList.h node.h linkedList.cpp
+	g++ -g -Wall -c linkedList.cpp
+
+node.o: node.h node.cpp
+	g++ -g -Wall -c node.cpp
+
+zombie.o: zombie.h zombie.cpp
+	g++ -g -Wall -c zombie.cpp
+
+clean: 
+	rm *.o exe -v
