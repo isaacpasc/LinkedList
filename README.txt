@@ -1,3 +1,7 @@
+*To run this program use Makefile
+make: creates executable named "exe"
+make clean: removes .o and executable
+
 The linkedlist class has the following properties:
 - Constructor
 • Destructor
